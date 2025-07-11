@@ -1,0 +1,121 @@
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+.wrapper{
+    background-color: burlywood;
+    display: flex;
+    width: 40%;
+    border:2px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-direction: column;
+    .topbar{
+        background-color: #353b48;
+        width: 100%;
+        padding: 7px;
+        display: flex;
+         background-color: #1e272e;
+        justify-content: space-between;
+        h3{
+                justify-content: flex-start;
+                font-size: 25px;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            border-radius: 200px;
+            background-color: rgb(216, 77, 77);
+            color: white;
+            cursor: pointer;   
+        }
+    }
+    .content{
+
+        width: 100%;
+        padding-top: 20px;
+        .area{
+            width: 100%;
+            padding: 0px 20px 0px 20px ;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            textarea{
+                width: 100%;
+                height: 130px;
+                padding: 10px;
+                resize: none;
+                background: rgb(251, 35, 35);
+                border-radius: 5px;
+                
+            }
+            span{
+                padding: 5px ;
+                font-family: Arial, Helvetica, sans-serif;
+                width: 150px;
+                position: absolute;
+                top: 5px;
+                left: 30px;
+                
+            }
+              textarea:focus + span {
+                top: -25px;
+                padding-left: 10px;
+                border-radius: 5px;
+                left: 70px;
+                border: 1px solid black;
+                font-weight: 500;
+                background-color: white;
+                }
+
+        }
+        .buttons{
+             background-color: #1e272e;
+            margin-top: 20px;
+            padding: 10px;
+            display: flex;
+            justify-content: flex-end;
+            button{
+                background-color: rgb(87, 93, 255);
+                margin-right: 10px;
+                padding: 7px;
+                font-size: 1rem;
+                font-weight: 700;
+                font-family: Arial, Helvetica, sans-serif;
+                border: none;
+                border-radius: 5px;
+                cursor:pointer;
+                    &:nth-child(1){
+                    background-color: rgb(243, 49, 49);
+                    &:hover{
+                        background-color: rgb(183, 3, 3);
+                    }
+                }
+                    &:nth-child(2){
+                    background-color: rgb(48, 243, 44);
+                    &:hover{
+                        background-color: rgb(3, 125, 1);
+                    }
+                }    
+            }
+        
+        }
+    }
+    
+    
+}
+
+.modal.active{
+    display: flex;
+}

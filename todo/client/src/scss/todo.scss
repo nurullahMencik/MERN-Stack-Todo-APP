@@ -1,0 +1,125 @@
+.todo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    .wrapper{
+        background-color: rgba(255, 72, 0, 0.781);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 600px;
+        width: 70%;
+        max-width: 1000px;
+        overflow: hidden;
+        border-radius:10px;
+        border:2px solid black;
+        .topbar{
+            height: 60px;
+            width: 100%;
+            background-color: #1e272e;
+            display: flex;
+            .mark,.searchTerm,.addButton{
+                flex: 1;
+                margin: 5px;
+                display: flex;
+            }
+            .mark{
+                justify-content: flex-start;
+                font-size: 25px;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .searchTerm{
+                justify-content: center;
+                input{
+                    width: 60%;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    outline: none;
+                    transition: all 0.7s;
+                    &:focus,&valid{
+                        width: 100%;
+                    }
+                }
+            }
+            .addButton{
+                justify-content: flex-end;
+                button{
+                    background-color: rgb(96, 199, 96);
+                    cursor: pointer;
+                    border-radius: 5px;
+                    padding: 7px 9px 9px 9px;
+                    border: none;
+                    outline: none;
+                    transition: all 0.5s;
+                    &:hover{
+                        transform: rotate(20deg);
+                    }
+                }
+            }
+        }
+        .list{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: calc(100% - 30px);
+            width: 100%;
+            margin-top: 10px;
+            gap: 20px;
+            .listItem{
+                display: flex;
+                padding: 10px;
+                border-radius: 5px;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                gap: 5px;
+                background-color: #4a69bd;
+                &:nth-child(2n){
+                background-color: #1e3799;
+                }
+                section{
+                    width: 100%;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: white;
+
+                }
+                .editButton,.deleteButton{
+                    cursor: pointer;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    padding: 4px 4px 0px 4px;
+                    transition: all 0.3s;
+                }
+                .editButton{
+                    background-color: yellow;
+                    font-size: 20px;
+                    &:hover{
+                    background-color: rgb(101, 101, 0);
+
+                    }
+                }
+                .deleteButton{
+                    background-color: red;
+                    font-size: 20px;
+                    color: white;
+                      &:hover{
+                    background-color: rgb(94, 0, 0);
+
+                    }
+                }
+            }
+        }
+    }
+}
